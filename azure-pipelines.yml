@@ -1,5 +1,5 @@
 variables:  
-  PoolName: 'windows-latest'
+  PoolName: 'Hosted VS2017'
   EnvironmentName: 'ch-test1'  
   EnvironmentK8Resource: 'default'
 
