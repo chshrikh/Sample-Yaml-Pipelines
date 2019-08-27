@@ -1,5 +1,5 @@
 variables:  
-  PoolName: 'default'
+  PoolName: 'windows-latest'
   EnvironmentName: 'ch-test1'  
   EnvironmentK8Resource: 'default'
 
