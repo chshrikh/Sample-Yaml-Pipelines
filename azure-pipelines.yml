@@ -1,0 +1,24 @@
+variables:  
+  PoolName: 'default'
+  EnvironmentName: 'ch-test1'  
+  EnvironmentK8Resource: 'default'
+
+jobs:
+- deployment: job1
+  environment: $(EnvironmentName).$(EnvironmentK8Resource)
+  pool: $(PoolName)
+  strategy:
+   runOnce:
+    deploy:
+     steps:
+     - script: echo Hello, world!
+       displayName: 'Run a one-line script'
+     - task: Kubernetes@1
+       displayName: 'kubectl get'
+       inputs:
+        connectionType: 'Kubernetes Service Connection'
+        namespace: 'default'
+        command: get
+        arguments: pods
+
+  
