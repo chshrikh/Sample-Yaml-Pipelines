@@ -20,7 +20,7 @@ jobs:
         namespace: 'default'
         command: get
         arguments: pods
-- deployment: job1
+- deployment: job2
   environment: $(EnvironmentName).$(EnvironmentK8Resource)
   pool: $(PoolName)
   strategy:
