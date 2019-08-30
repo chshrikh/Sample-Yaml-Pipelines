@@ -11,6 +11,8 @@ jobs:
    runOnce:
     deploy:
      steps:
+     - powershell: |
+          start-sleep -s 120
      - script: echo Hello, world!
        displayName: 'Run a one-line script'
      - task: Kubernetes@1
