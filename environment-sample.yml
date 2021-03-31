@@ -1,0 +1,13 @@
+variables:  
+  PoolName: 'Hosted VS2017'
+  EnvironmentName: 'ch-test1'
+jobs:
+- deployment: job1
+  environment: $(EnvironmentName)
+  pool: $(PoolName)
+  strategy:
+   runOnce:
+    deploy:
+     steps:
+     - script: echo Hello, world!
+       displayName: 'Run a one-line script'
