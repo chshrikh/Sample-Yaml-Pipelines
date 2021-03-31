@@ -1,6 +1,6 @@
 variables:  
   PoolName: 'Hosted VS2017'
-  EnvironmentName: 'ch-0331-02'
+  EnvironmentName: 'ch-0331-03'
 jobs:
 - deployment: job1
   environment: $(EnvironmentName)
